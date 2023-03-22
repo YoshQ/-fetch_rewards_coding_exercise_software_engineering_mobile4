@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fetchrewards.tablayout.R;
+//import com.example.fetchrewards.tablayout.R;
 //import com.example.rabia.tablayout.R;
 
 import java.util.List;
@@ -19,11 +19,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     private List<String> data;
-    private List<Integer> pic;
+    //private List<Integer> pic;
+    private List<String> pic;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public RecyclerAdapter( List<Integer> pic, Context context) {
+    //public RecyclerAdapter( List<Integer> pic, Context context) {
+    public RecyclerAdapter( List<String> pic, Context context) {
         this.pic = pic;
         this.context = context;
         this.layoutInflater=LayoutInflater.from(context);
@@ -40,8 +42,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Integer pic1=pic.get(i);
-        viewHolder.c.setImageResource(pic1);
+        //Integer pic1=pic.get(i);
+        String pic1=pic.get(i);
+        //viewHolder.c.setImageResource(pic1);
 
     }
 
@@ -51,10 +54,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        CircleImageView c;
+        //CircleImageView c;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            c=itemView.findViewById(R.id.image1);
+            //c=itemView.findViewById(R.id.image1);
 
         }
     }

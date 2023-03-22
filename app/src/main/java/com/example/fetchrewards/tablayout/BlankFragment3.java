@@ -32,11 +32,16 @@ public class BlankFragment3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_blank_fragment3, container, false);
-        List<Integer> pic=new ArrayList<>();
-        pic.add(R.drawable.colg9);
-        pic.add(R.drawable.colg10);
-        pic.add(R.drawable.colg12);
-        pic.add(R.drawable.event5);
+        //List<Integer> pic=new ArrayList<>();
+        List<String> pic=new ArrayList<>();
+        //pic.add(R.drawable.colg9);
+        //pic.add(R.drawable.colg10);
+        //pic.add(R.drawable.colg12);
+        //pic.add(R.drawable.event5);
+        pic.add("Ammara Rasheed");
+        pic.add("Sara Khan");
+        pic.add("Maham Saleem");
+        pic.add("Ayesha Bibi");
         RecyclerView recyclerView=view.findViewById(R.id.recycler2);
         RecyclerAdapter recyclerAdapter=new RecyclerAdapter(pic,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
