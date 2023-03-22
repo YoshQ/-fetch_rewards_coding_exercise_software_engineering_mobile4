@@ -37,9 +37,9 @@ public class BlankFragment2 extends Fragment {
         name.add("Sara Khan");
         name.add("Maham Saleem");
         name.add("Ayesha Bibi");
-        RecyclerAdapterProfile recyclerAdapterProfile=new RecyclerAdapterProfile(name,getActivity());
+        //RecyclerAdapterProfile recyclerAdapterProfile=new RecyclerAdapterProfile(name,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(recyclerAdapterProfile);
+        //recyclerView.setAdapter(recyclerAdapterProfile);
         return view;
     }
 

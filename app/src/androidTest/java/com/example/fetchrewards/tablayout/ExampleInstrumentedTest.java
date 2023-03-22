@@ -24,6 +24,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.rabia.tablayout", appContext.getPackageName());
+        assertEquals("com.example.fetchrewards.tablayout", appContext.getPackageName());
     }
 }

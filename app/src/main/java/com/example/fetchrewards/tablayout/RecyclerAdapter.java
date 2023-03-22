@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 //import com.example.fetchrewards.tablayout.R;
-//import com.example.rabia.tablayout.R;
 
 import java.util.List;
 
