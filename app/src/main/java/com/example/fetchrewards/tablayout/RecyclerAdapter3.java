@@ -1,23 +1,21 @@
 package com.example.fetchrewards.tablayout;
 
 import android.content.Context;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class RecyclerAdapter3 extends RecyclerView.Adapter<RecyclerAdapter3.ViewHolder> {
-    //private List<String> data;
     private List<Employee> data;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    //public RecyclerAdapterProfile(List<String> data, Context context) {
     public RecyclerAdapter3(List<Employee> data, Context context) {
         this.context = context;
         this.data=data;
@@ -26,8 +24,6 @@ public class RecyclerAdapter3 extends RecyclerView.Adapter<RecyclerAdapter3.View
 
     @NonNull
     @Override
-
-
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v=layoutInflater.inflate(R.layout.recycler_layout,viewGroup,false);
         return new ViewHolder(v);
@@ -35,10 +31,6 @@ public class RecyclerAdapter3 extends RecyclerView.Adapter<RecyclerAdapter3.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        //String name=data.get(i);
-        //Employee name=data.get(i);
-        //viewHolder.textView.setText(name);
-        //viewHolder.textView.setText((CharSequence) name);
         //Log.i("creation2", "just before 2nd for loop");
         viewHolder.idView.setText("ID: " + data.get(i).getId());
         viewHolder.listIDView.setText("List ID: " + data.get(i).getListId());
@@ -51,11 +43,9 @@ public class RecyclerAdapter3 extends RecyclerView.Adapter<RecyclerAdapter3.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        //TextView textView;
         TextView idView, listIDView, nameView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            //textView=itemView.findViewById(R.id.name);
             nameView=itemView.findViewById(R.id.name);
             idView=itemView.findViewById(R.id.id);
             listIDView=itemView.findViewById(R.id.listID);

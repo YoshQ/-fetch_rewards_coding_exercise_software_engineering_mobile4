@@ -7,7 +7,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:id="@+id/recyclerProfile"
+        android:id="@+id/recycler2"
         android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

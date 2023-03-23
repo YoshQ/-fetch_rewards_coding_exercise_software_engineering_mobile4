@@ -22,18 +22,23 @@
         android:layout_height="wrap_content">
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
-            android:text="Dialog"
-            android:id="@+id/dialog"
+            android:text="List 1"
+            android:id="@+id/list1"
             android:layout_height="wrap_content" />
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
-            android:text="Profile "
-            android:id="@+id/profile"
+            android:text="List 2"
+            android:id="@+id/list2"
             android:layout_height="wrap_content" />
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
-            android:text="All Users"
-            android:id="@+id/user"
+            android:text="List 3"
+            android:id="@+id/list3"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:text="List 4"
+            android:id="@+id/list4"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.tabs.TabLayout>

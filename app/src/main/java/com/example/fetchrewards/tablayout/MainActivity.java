@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Employee> lstEmployee4;
     private ViewPager viewPager;
     private TabLayout tb;
-    private TabItem t1,t2,t3;
+    //private TabItem t1,t2,t3;
+    private TabItem t1,t2,t3,t4;
 
     //private void init() {
         //Call after the constructor
@@ -91,6 +92,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 if(tab.getPosition()==2){
+                    if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.green2));
+                    }
+                }
+                if(tab.getPosition()==3){
+                    if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+                        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.green1));
+                    }
+                }
+                if(tab.getPosition()==4){
                     if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
                         getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this,R.color.green2));
                     }

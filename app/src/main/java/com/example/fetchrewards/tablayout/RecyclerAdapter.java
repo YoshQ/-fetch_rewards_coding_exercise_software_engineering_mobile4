@@ -1,63 +1,55 @@
 package com.example.fetchrewards.tablayout;
 
 import android.content.Context;
-//import android.support.annotation.NonNull;
-//import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-//import com.example.fetchrewards.tablayout.R;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    private List<String> data;
-    //private List<Integer> pic;
-    private List<String> pic;
+    private List<Employee> data;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    //public RecyclerAdapter( List<Integer> pic, Context context) {
-    public RecyclerAdapter( List<String> pic, Context context) {
-        this.pic = pic;
+    public RecyclerAdapter(List<Employee> data, Context context) {
         this.context = context;
+        this.data=data;
         this.layoutInflater=LayoutInflater.from(context);
     }
 
     @NonNull
     @Override
-
-
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v=layoutInflater.inflate(R.layout.recycler_profile,viewGroup,false);
+        View v=layoutInflater.inflate(R.layout.recycler_layout,viewGroup,false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        //Integer pic1=pic.get(i);
-        String pic1=pic.get(i);
-        //viewHolder.c.setImageResource(pic1);
-
+        Log.i("creation2", "data.size() in recycleradapter: " + data.size());
+        viewHolder.idView.setText("ID: " + data.get(i).getId());
+        viewHolder.listIDView.setText("List ID: " + data.get(i).getListId());
+        viewHolder.nameView.setText("Name: " + data.get(i).getName());
     }
 
     @Override
     public int getItemCount() {
-        return pic.size();
+        return data.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        //CircleImageView c;
+        TextView idView, listIDView, nameView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            //c=itemView.findViewById(R.id.image1);
-
+            nameView=itemView.findViewById(R.id.name);
+            idView=itemView.findViewById(R.id.id);
+            listIDView=itemView.findViewById(R.id.listID);
         }
     }
 }

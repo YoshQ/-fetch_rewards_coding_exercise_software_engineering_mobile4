@@ -24,6 +24,8 @@ public class PageAdapter extends FragmentPagerAdapter {
                 return new BlankFragment2();
             case 2:
                 return new BlankFragment3();
+            case 3:
+                return new BlankFragment4();
                 default:
                     return null;
         }

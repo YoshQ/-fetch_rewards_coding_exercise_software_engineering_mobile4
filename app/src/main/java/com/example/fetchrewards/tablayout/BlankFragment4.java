@@ -29,9 +29,9 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BlankFragment extends Fragment {
+public class BlankFragment4 extends Fragment {
 
-    public BlankFragment() {
+    public BlankFragment4() {
         // Required empty public constructor
     }
     private final String JSON_URL = "https://fetch-hiring.s3.amazonaws.com/hiring.json";
@@ -66,7 +66,6 @@ public class BlankFragment extends Fragment {
                 Log.i("creation2", "just inside onresponse");
                 JSONObject jsonObject = null;
 
-                //lstEmployeeAll = new ArrayList<>();
                 for (int i = 0; i < response.length(); i++) {
                     //Log.i("creation2", "just inside first for loop");
                     try {
@@ -88,11 +87,9 @@ public class BlankFragment extends Fragment {
                         //Log.i("creation2", "just inside compare");
                         //Log.i("creation2", "just inside compare, lstEmployeeAll.size(): " + lstEmployeeAll.size());
                         int listCompare = Integer.compare(Integer.parseInt(lhs.getListId()), Integer.parseInt(rhs.getListId()));
-                        //return nameCompare;
                         if (listCompare != 0) {
                             return listCompare;
                         }
-                        //return lhs.getName().compareTo(rhs.getName());
                         return Integer.compare(Integer.parseInt(lhs.getId()), Integer.parseInt(rhs.getId()));
                     }
                 });
@@ -103,9 +100,9 @@ public class BlankFragment extends Fragment {
                     //Log.i("creation2", "just inside second for loop");
                     if (!lstEmployeeAll.get(i).getName().isEmpty() & lstEmployeeAll.get(i).getName() != "null") {
                         //Log.i("creation2", "just inside if statement of second for loop");
-                        if (Integer.parseInt(lstEmployeeAll.get(i).getListId()) == 1) {
+                        if (Integer.parseInt(lstEmployeeAll.get(i).getListId()) == 4) {
                             //Log.i("creation2", "in case 1");
-                            lstEmployee1.add(lstEmployeeAll.get(i));
+                            lstEmployee4.add(lstEmployeeAll.get(i));
                         }
                     }
                 }
@@ -116,7 +113,6 @@ public class BlankFragment extends Fragment {
             public void onErrorResponse(VolleyError error) {
             }
         });
-        //requestQueue = Volley.newRequestQueue(BlankFragment.this);
         requestQueue = Volley.newRequestQueue(this.getContext());
         requestQueue.add(request);
     }
@@ -125,12 +121,15 @@ public class BlankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_blank, container, false);
-        RecyclerView recyclerView=view.findViewById(R.id.recycler1);
-        RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee1,getActivity());
+        //View view= inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
+        View view= inflater.inflate(R.layout.fragment_blank_fragment4, container, false);
+        //RecyclerView recyclerView=view.findViewById(R.id.recyclerProfile);
+        RecyclerView recyclerView=view.findViewById(R.id.recycler4);
+        //RecyclerAdapter2 recyclerAdapter2 =new RecyclerAdapter2(lstEmployee4,getActivity());
+        RecyclerAdapter4 recyclerAdapter4 =new RecyclerAdapter4(lstEmployee4,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         //recyclerView.setAdapter(recyclerAdapter2);
-        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView.setAdapter(recyclerAdapter4);
         return view;
     }
 
