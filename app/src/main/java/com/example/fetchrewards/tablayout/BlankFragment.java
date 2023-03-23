@@ -129,7 +129,6 @@ public class BlankFragment extends Fragment {
         RecyclerView recyclerView=view.findViewById(R.id.recycler1);
         RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee1,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //recyclerView.setAdapter(recyclerAdapter2);
         recyclerView.setAdapter(recyclerAdapter);
         return view;
     }

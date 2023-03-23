@@ -44,7 +44,6 @@ public class BlankFragment4 extends Fragment {
     private List<Employee> lstEmployee4;
 
     @Override
-    //protected void onCreate(Bundle savedInstanceState) {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -121,16 +120,10 @@ public class BlankFragment4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //View view= inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
         View view= inflater.inflate(R.layout.fragment_blank_fragment4, container, false);
-        //RecyclerView recyclerView=view.findViewById(R.id.recyclerProfile);
         RecyclerView recyclerView=view.findViewById(R.id.recycler4);
-        //RecyclerAdapter2 recyclerAdapter2 =new RecyclerAdapter2(lstEmployee4,getActivity());
-        //RecyclerAdapter4 recyclerAdapter4 =new RecyclerAdapter4(lstEmployee4,getActivity());
         RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee4,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //recyclerView.setAdapter(recyclerAdapter2);
-        //recyclerView.setAdapter(recyclerAdapter4);
         recyclerView.setAdapter(recyclerAdapter);
         return view;
     }

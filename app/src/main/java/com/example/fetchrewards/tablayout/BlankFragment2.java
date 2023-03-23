@@ -110,10 +110,8 @@ public class BlankFragment2 extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
         RecyclerView recyclerView=view.findViewById(R.id.recycler2);
-        //RecyclerAdapter2 recyclerAdapter2 =new RecyclerAdapter2(lstEmployee2,getActivity());
         RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee2,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        //recyclerView.setAdapter(recyclerAdapter2);
         recyclerView.setAdapter(recyclerAdapter);
         return view;
     }
