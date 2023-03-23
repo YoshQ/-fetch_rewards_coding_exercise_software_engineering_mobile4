@@ -126,10 +126,12 @@ public class BlankFragment4 extends Fragment {
         //RecyclerView recyclerView=view.findViewById(R.id.recyclerProfile);
         RecyclerView recyclerView=view.findViewById(R.id.recycler4);
         //RecyclerAdapter2 recyclerAdapter2 =new RecyclerAdapter2(lstEmployee4,getActivity());
-        RecyclerAdapter4 recyclerAdapter4 =new RecyclerAdapter4(lstEmployee4,getActivity());
+        //RecyclerAdapter4 recyclerAdapter4 =new RecyclerAdapter4(lstEmployee4,getActivity());
+        RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee4,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         //recyclerView.setAdapter(recyclerAdapter2);
-        recyclerView.setAdapter(recyclerAdapter4);
+        //recyclerView.setAdapter(recyclerAdapter4);
+        recyclerView.setAdapter(recyclerAdapter);
         return view;
     }
 

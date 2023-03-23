@@ -110,9 +110,11 @@ public class BlankFragment3 extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_blank_fragment3, container, false);
         RecyclerView recyclerView=view.findViewById(R.id.recycler3);
-        RecyclerAdapter3 recyclerAdapter3 =new RecyclerAdapter3(lstEmployee3,getActivity());
+        //RecyclerAdapter3 recyclerAdapter3 =new RecyclerAdapter3(lstEmployee3,getActivity());
+        RecyclerAdapter recyclerAdapter =new RecyclerAdapter(lstEmployee3,getActivity());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(recyclerAdapter3);
+        //recyclerView.setAdapter(recyclerAdapter3);
+        recyclerView.setAdapter(recyclerAdapter);
         return view;
     }
 }
